@@ -1,0 +1,101 @@
+:root {
+    --fondo: #F2F5F9;
+    --blanco: #fff;
+    --negro-oscuro: #111729;
+    --negro-claro: #4A5567;
+    --lato: "Lato", serif;
+    --popi: "Poppins", sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 1.6rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fondo);
+    font-family: var(--lato);
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        padding: 0;
+    }
+}
+
+.author-info {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 16px;
+    color: rgb(55, 65, 81);
+}
+
+.author-info a {
+    color: rgb(55, 65, 81);
+    text-decoration: underline;
+}
+
+/* estilos para la tarjeta */
+.tarjeta {
+    border-radius: 1rem;
+    max-width: 420px;
+    /* fondo */
+    background-color: var(--blanco);
+}
+
+.tarjeta-header {
+    position: relative;
+}
+
+.tarjeta-header::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 68px;
+    background-image: url(../fotos/white-overlay.svg);
+}
+
+.tarjeta-header img {
+    width: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.tarjeta-textos {
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+}
+
+.tarjeta-textos h1 {
+    margin-bottom: 1rem;
+    font-family: var(--popi);
+    font-weight: 500;
+    font-size: 2.4rem;
+}
+
+.perfil {
+    padding: 2rem 2rem;
+    border-top: 1px solid var(--fondo);
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.perfil img {
+    border-radius: 100%;
+}
+
+.perfil-info p {
+    color: var(--negro-claro);
+    font-weight: bold;
+}
+
+@media screen and (min-width: 1024px) {
+    .perfil img {
+        width: 60px;
+    }
+}
